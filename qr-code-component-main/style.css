@@ -1,2 +1,68 @@
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; position: fixed; bottom: 10px;}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;;
+}
+
+body {
+    background-color: var(--light-gray);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--white);
+    height: 500px;
+    aspect-ratio: 9/14;
+    position: relative;
+    top: 20%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    gap: 30px;
+
+    cursor: pointer;
+    
+    transition: box-shadow .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px 0px var(--dark-blue);
+    transform: scale(1.05);
+}
+
+#qrcode {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 12px;
+}
+
+.description {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.description p {
+    font-size: 15px;
+    max-width: 90%;
+    color: var(--grayish-blue);
+}
